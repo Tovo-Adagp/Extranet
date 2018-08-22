@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import PerfectScrollbar from 'perfect-scrollbar';
+
 
 
 @Component({
@@ -11,6 +13,14 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
     constructor() {
 
+    }
+
+    ngOnInit(){
+      const ps = new PerfectScrollbar('#sidebar', {
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 20
+      });
     }
 
 }
