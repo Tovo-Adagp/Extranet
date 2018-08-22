@@ -8,8 +8,12 @@ import { RouterModule } from '@angular/router';
 
 import { AuthModule } from './auth/auth.module';
 
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 
 @NgModule({
@@ -19,16 +23,19 @@ import { FooterComponent } from './footer/footer.component';
         AuthModule,
 
         RouterModule,
+
+        PerfectScrollbarModule,
     ],
     declarations: [
+        SidebarComponent,
         NavbarComponent,
         FooterComponent,
 
     ],
     exports: [
+        SidebarComponent,
         NavbarComponent,
         FooterComponent,
-
     ]
 })
 export class DirectivesModule {}

@@ -3,9 +3,13 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 
+
+import * as $ from 'jquery';
+
 @Component({
     selector: 'navbar',
     template: require('./navbar.html'),
+    styles: [require('./navbar.scss')],
 })
 export class NavbarComponent {
     isCollapsed = true;
@@ -31,6 +35,13 @@ export class NavbarComponent {
             this.currentUser = user;
             this.reset();
         });
+
+    }
+
+    ngOnInit(){
+      $('#dismiss, .overlay, #sidebarCollapse').on('click', function () {
+        $('#sidebar, #content, .overlay').toggleClass('active');
+      });
     }
 
     reset() {
@@ -50,4 +61,5 @@ export class NavbarComponent {
             this.Router.navigateByUrl('/home');
             this.reset();
         });
-    }}
+    }
+}
