@@ -13,6 +13,7 @@ interface User {
 @Component({
     selector: 'login',
     template: require('./login.html'),
+    styles: [require('./login.scss')],
 })
 export class LoginComponent {
     user: User = {

@@ -8,7 +8,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
-//@import url(https://fonts.googleapis.com/css?family=Georgia:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Georgia:400,500,600,700);
 
 /**
  * App-wide Styles
@@ -59,6 +59,7 @@ body {
       width: calc(100% - 250px);
   }
 
+
   // active content for width>769px
   /*#content.active {
       width: 100%;
@@ -83,11 +84,15 @@ body {
   }*/
 
   #sidebarCollapse {
-    display: none
+    display: none;
   }
 
-  #dismiss {
-    display: none
+  #dismiss{
+    display: none;
+  }
+
+  #nav-top {
+    display: none;
   }
 }
 

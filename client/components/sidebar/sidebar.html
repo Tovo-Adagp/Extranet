@@ -1,18 +1,18 @@
 <!-- Sidebar -->
-<nav id="sidebar">
+<nav id="sidebar" [hidden]="!isLoggedIn">
 
   <div id="dismiss">
     <i class="fa fa-arrow-left"></i>
   </div>
 
   <div class="sidebar-header">
-    <img src="assets/images/logo_adagp_rouge.png" alt="Logo ADAGP"
+    <img src="assets/images/logo_adagp_blanc.png" alt="Logo ADAGP"
     height="69">
   </div>
 
   <ul class="list-unstyled components">
     <!--p>Extranet</p-->
-      <li class="active">
+      <li>
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
               <li>
